@@ -55,7 +55,7 @@ Please refer to respective directories.
 ||Test2800|<ins>33.73</ins>|<ins>0.937</ins>|
 |**Defocus Deblurring**|DPDD|*26.06*/**26.16**/<ins>26.36</ins>|*0.810*/**0.814**/<ins>0.820</ins>|
 |**Motion Deblurring**|GoPro|<ins>33.28</ins>|<ins>0.963</ins>|
-||RSBlur|<u>34.06</ins>|<u>0.868</ins>|
+||RSBlur|<ins>34.06</ins>|<ins>0.868</ins>|
 
 
 ## Citation
