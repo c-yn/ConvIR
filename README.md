@@ -34,7 +34,7 @@ Please refer to respective directories.
 |------|-----|-----|
 |*ConvIR-S (small)*|5.53M|42.1G|
 |**ConvIR-B (base)**| 8.63M|71.22G|
-|<u>ConvIR-L (large)</u>| 14.83M |129.34G|
+|<ins>ConvIR-L (large)</ins>| 14.83M |129.34G|
 
 |Task|Dataset|PSNR|SSIM|
 |----|------|-----|----|
@@ -51,11 +51,11 @@ Please refer to respective directories.
 |**Image Desnowing**|CSD|*38.43*/**39.10**|*0.99*/**0.99**|
 ||SRRS|*32.25*/**32.39**|*0.98*/**0.98**|
 ||Snow100K|*33.79*/**33.92**|*0.95*/**0.96**|
-|**Image Deraining**|Test100|<u>31.40</u>|<u>0.919</u>|
-||Test2800|<u>33.73</u>|<u>0.937</u>|
-|**Defocus Deblurring**|DPDD|*26.06*/**26.16**/<u>26.36</u>|*0.810*/**0.814**/<u>0.820</u>|
-|**Motion Deblurring**|GoPro|<u>33.28</u>|<u>0.963</u>|
-||RSBlur|<u>34.06</u>|<u>0.868</u>|
+|**Image Deraining**|Test100|<ins>31.40</u>|<ins>0.919</ins>|
+||Test2800|<ins>33.73</ins>|<ins>0.937</ins>|
+|**Defocus Deblurring**|DPDD|*26.06*/**26.16**/<ins>26.36</ins>|*0.810*/**0.814**/<ins>0.820</ins>|
+|**Motion Deblurring**|GoPro|<ins>33.28</ins>|<ins>0.963</ins>|
+||RSBlur|<u>34.06</ins>|<u>0.868</ins>|
 
 
 ## Citation
