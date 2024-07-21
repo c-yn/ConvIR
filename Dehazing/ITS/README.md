@@ -41,6 +41,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──gt`  <br/>
           `└──hazy`  
+          
 `└──NHR` <br/>
      `├──train`  <br/>
           `├──gt`  <br/>
@@ -48,6 +49,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──gt`  <br/>
           `└──hazy` 
+          
 `└──GTA5` <br/>
      `├──train`  <br/>
           `├──gt`  <br/>
@@ -55,6 +57,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──gt`  <br/>
           `└──hazy` 
+          
 `└──haze4k` <br/>
      `├──train`  <br/>
           `├──GT`  <br/>
@@ -62,6 +65,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──GT`  <br/>
           `└──IN` 
+          
 `└──Haze1k-thin` <br/>
      `├──train`  <br/>
           `├──input`  <br/>
@@ -69,6 +73,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──input`  <br/>
           `└──target` 
+          
 `└──Haze1k-moderate` <br/>
      `├──train`  <br/>
           `├──input`  <br/>
@@ -76,6 +81,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──input`  <br/>
           `└──target` 
+          
 `└──Haze1k-thick` <br/>
      `├──train`  <br/>
           `├──input`  <br/>
@@ -83,6 +89,7 @@ For training and testing, your directory structure should look like this
      `└──test`  <br/>
           `├──input`  <br/>
           `└──target` 
+          
 `└──Dense-Haze` <br/>
      `├──train`  <br/>
           `├──hazy`  <br/>
