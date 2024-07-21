@@ -14,7 +14,7 @@ The official pytorch implementation of the paper **[Revitalizing Convolutional N
 #### Yuning Cui, Wenqi Ren, Xiaochun Cao, Alois Knoll
 
 ## News
-All resulting images are available in the provided link.
+All resulting images and pre-trained models are available in the provided links.
 
 **07/22/2024** We release the code for dehazing (ITS/OTS), desnowing, deraining, and motion deblurring.
 
