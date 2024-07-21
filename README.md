@@ -9,10 +9,16 @@
 
 ## Revitalizing Convolutional Network for Image Restoration
 
-The official pytorch implementation of the paper **[Revitalizing Convolutional Network for Image Restoration
- (T-PAMI'24)](https://ieeexplore.ieee.org/abstract/document/10571568)**
+The official pytorch implementation of the paper **[Revitalizing Convolutional Network for Image Restoration](https://ieeexplore.ieee.org/abstract/document/10571568)**
 
 #### Yuning Cui, Wenqi Ren, Xiaochun Cao, Alois Knoll
+
+## News
+All resulting images are available in the provided link.
+
+**07/22/2024** We release the code for dehazing (ITS/OTS), desnowing, deraining, and motion deblurring.
+
+
 
 ## Installation
 The project is built with PyTorch 3.8, PyTorch 1.8.1. CUDA 10.2, cuDNN 7.6.5
