@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Revitalizing Convolutional Network for Image Restoration</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p><a href="https://paperswithcode.com/sota/image-dehazing-on-sots-indoor"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/image-dehazing-on-sots-indoor" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/image-dehazing-on-sots-outdoor"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/image-dehazing-on-sots-outdoor" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/image-dehazing-on-haze4k"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/image-dehazing-on-haze4k" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/image-dehazing-on-i-haze"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/image-dehazing-on-i-haze" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/image-dehazing-on-o-haze"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/image-dehazing-on-o-haze" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/snow-removal-on-snow100k"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/snow-removal-on-snow100k" alt="PWC"></a>
+<a href="https://paperswithcode.com/sota/snow-removal-on-srrs"><img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/revitalizing-convolutional-network-for-image/snow-removal-on-srrs" alt="PWC"></a></p>
+<h2 id="revitalizing-convolutional-network-for-image-restoration">Revitalizing Convolutional Network for Image Restoration</h2>
+<p>The official pytorch implementation of the paper <strong><a href="https://ieeexplore.ieee.org/abstract/document/10571568">Revitalizing Convolutional Network for Image Restoration
+(T-PAMI'24)</a></strong></p>
+<h4 id="yuning-cui-wenqi-ren-xiaochun-cao-alois-knoll">Yuning Cui, Wenqi Ren, Xiaochun Cao, Alois Knoll</h4>
+<h2 id="installation">Installation</h2>
+<p>The project is built with PyTorch 3.8, PyTorch 1.8.1. CUDA 10.2, cuDNN 7.6.5
+For installing, follow these instructions:</p>
+<pre><code>conda install pytorch=1.8.1 torchvision=0.9.1 -c pytorch
+pip install tensorboard einops scikit-image pytorch_msssim opencv-python
+</code></pre>
+<p>Install warmup scheduler:</p>
+<pre><code>cd pytorch-gradual-warmup-lr/
+python setup.py install
+cd ..
+</code></pre>
+<h2 id="training-and-evaluation">Training and Evaluation</h2>
+<p>Please refer to respective directories.</p>
+<h2 id="results-download">Results [Download]</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>FLOPs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>ConvIR-S (small)</em></td>
+<td>5.53M</td>
+<td>42.1G</td>
+</tr>
+<tr>
+<td><strong>ConvIR-B (base)</strong></td>
+<td>8.63M</td>
+<td>71.22G</td>
+</tr>
+<tr>
+<td><ins>ConvIR-L (large)</ins></td>
+<td>14.83M</td>
+<td>129.34G</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Dataset</th>
+<th>PSNR</th>
+<th>SSIM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Image Dehazing</strong></td>
+<td>SOTS-Indoor</td>
+<td><em>41.53</em>/<strong>42.72</strong></td>
+<td><em>0.996</em>/<strong>0.997</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>SOTS-Outdoor</td>
+<td><em>37.95</em>/<strong>39.42</strong></td>
+<td><em>0.994</em>/<strong>0.996</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Haze4K</td>
+<td><em>33.36</em></font>/<strong>34.15</strong>/<ins>34.50</ins></td>
+<td><em>0.99</em>/<strong>0.99</strong>/<ins>0.99</ins></td>
+</tr>
+<tr>
+<td></td>
+<td>Dense-Haze</td>
+<td><em>17.45</em>/<strong>16.86</strong></td>
+<td><em>0.648</em>/<strong>0.621</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>NH-HAZE</td>
+<td><em>20.65</em>/<strong>20.66</strong></td>
+<td><em>0.807</em>/<strong>0.802</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>O-HAZE</td>
+<td><em>25.25</em>/<strong>25.36</strong></td>
+<td><em>0.784</em>/<strong>0.780</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>I-HAZE</td>
+<td><em>21.95</em>/<strong>22.44</strong></td>
+<td><em>0.888</em>/<strong>0.887</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>SateHaze-1k-Thin/Moderate/Thick</td>
+<td><em>25.11</em>/<em>26.79</em>/<em>22.65</em></td>
+<td><em>0.978</em>/<em>0.978</em>/<em>0.950</em></td>
+</tr>
+<tr>
+<td></td>
+<td>NHR</td>
+<td><em>28.85</em>/<strong>29.49</strong></td>
+<td><em>0.981</em>/<strong>0.983</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>GTA5</td>
+<td><em>31.68</em>/<strong>31.83</strong></td>
+<td><em>0.917</em>/<strong>0.921</strong></td>
+</tr>
+<tr>
+<td><strong>Image Desnowing</strong></td>
+<td>CSD</td>
+<td><em>38.43</em>/<strong>39.10</strong></td>
+<td><em>0.99</em>/<strong>0.99</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>SRRS</td>
+<td><em>32.25</em>/<strong>32.39</strong></td>
+<td><em>0.98</em>/<strong>0.98</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Snow100K</td>
+<td><em>33.79</em>/<strong>33.92</strong></td>
+<td><em>0.95</em>/<strong>0.96</strong></td>
+</tr>
+<tr>
+<td><strong>Image Deraining</strong></td>
+<td>Test100</td>
+<td><ins>31.40</u></td>
+<td><ins>0.919</ins></td>
+</tr>
+<tr>
+<td></td>
+<td>Test2800</td>
+<td><ins>33.73</ins></td>
+<td><ins>0.937</ins></td>
+</tr>
+<tr>
+<td><strong>Defocus Deblurring</strong></td>
+<td>DPDD</td>
+<td><em>26.06</em>/<strong>26.16</strong>/<ins>26.36</ins></td>
+<td><em>0.810</em>/<strong>0.814</strong>/<ins>0.820</ins></td>
+</tr>
+<tr>
+<td><strong>Motion Deblurring</strong></td>
+<td>GoPro</td>
+<td><ins>33.28</ins></td>
+<td><ins>0.963</ins></td>
+</tr>
+<tr>
+<td></td>
+<td>RSBlur</td>
+<td><ins>34.06</ins></td>
+<td><ins>0.868</ins></td>
+</tr>
+</tbody>
+</table>
+<h2 id="citation">Citation</h2>
+<pre><code>@article{cui2024revitalizing,
+  title={Revitalizing Convolutional Network for Image Restoration},
+  author={Cui, Yuning and Ren, Wenqi and Cao, Xiaochun and Knoll, Alois},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
+
+@inproceedings{cui2023irnext,
+  title={IRNeXt: Rethinking Convolutional Network Design for Image Restoration},
+  author={Cui, Yuning and Ren, Wenqi and Yang, Sining and Cao, Xiaochun and Knoll, Alois},
+  booktitle={International Conference on Machine Learning},
+  pages={6545--6564},
+  year={2023},
+  organization={PMLR}
+}
+</code></pre>
+<h2 id="contact">Contact</h2>
+<p>Should you have any problem, please contact Yuning Cui.</p>
+
+            
+            
+        </body>
+        </html>
