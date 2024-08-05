@@ -18,6 +18,8 @@ All resulting images and pre-trained models are available in the provided links.
 
 **07/22/2024** We release the code for dehazing (ITS/OTS), desnowing, deraining, and motion deblurring.
 
+## Pretrained models
+[gdrive](https://drive.google.com/drive/folders/1_5fO2p5xoWO5cUEVoXJ7x3Uhg1AP18FQ?usp=sharing), [百度网盘](https://pan.baidu.com/s/1oYzdxs3FvLJMWx7S5GW0rA?pwd=dvta)
 
 
 ## Installation
