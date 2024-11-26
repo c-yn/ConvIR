@@ -17,6 +17,7 @@ The official pytorch implementation of the paper **[Revitalizing Convolutional N
 All resulting images and pre-trained models are available in the provided links.
 
 **11/26/2024** Code for real haze and haze4k are released.
+
 **07/22/2024** We release the code for dehazing (ITS/OTS), desnowing, deraining, and motion deblurring.
 
 ## Pretrained models
