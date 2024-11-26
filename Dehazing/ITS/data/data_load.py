@@ -7,8 +7,9 @@ from torch.utils.data import Dataset, DataLoader
 
 def train_dataloader(path, batch_size=64, num_workers=0, data='ITS', use_transform=True):
     image_dir = os.path.join(path, 'train')
-    if data == 'ITS':
-        crop_size = 256
+
+    if data == 'real_haze':
+        crop_size = [800,1184]
     else:
         crop_size = 256
 
@@ -71,6 +72,12 @@ class DeblurDataset(Dataset):
         if self.data == 'ITS':
             image = Image.open(os.path.join(self.image_dir, 'hazy', self.image_list[idx]))
             label = Image.open(os.path.join(self.image_dir, 'gt', self.image_list[idx].split('_')[0]+'.png'))
+        elif self.data == 'real_haze':
+            image = Image.open(os.path.join(self.image_dir, 'hazy', self.image_list[idx]))
+            label = Image.open(os.path.join(self.image_dir, 'gt', self.image_list[idx]).replace('hazy', 'GT'))
+        elif self.data == 'haze4k':
+            image = Image.open(os.path.join(self.image_dir, 'IN', self.image_list[idx]))
+            label = Image.open(os.path.join(self.image_dir, 'GT', self.image_list[idx]))
 
         if self.transform:
             image, label = self.transform(image, label)
