@@ -19,7 +19,9 @@ python main.py
 ~~~
 
 To train on real haze or haze4k, please uncomment the corresponding hyper-parameter part
+
 Then run ``python main.py --data Haze4K`` or ``python main.py --data real_haze`` with the mode and model version you want, such as small/large.
+
 Please comfirm that the model is trained on a larger patch for real haze.
 ### Evaluation
 Download model from [gdrive](https://drive.google.com/drive/folders/1_5fO2p5xoWO5cUEVoXJ7x3Uhg1AP18FQ?usp=sharing), [百度网盘](https://pan.baidu.com/s/1oYzdxs3FvLJMWx7S5GW0rA?pwd=dvta)
