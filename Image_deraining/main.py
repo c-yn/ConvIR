@@ -34,7 +34,7 @@ if __name__ == '__main__':
     # Directories
     parser.add_argument('--model_name', default='ConvIR', type=str)
     parser.add_argument('--data_dir', type=str, default='../../dataset/deraining/train/Rain13K/')
-    parser.add_argument('--valid_data', type=str, default='/Rain100K/')
+    parser.add_argument('--valid_data', type=str, default='')
 
     # Train
     parser.add_argument('--batch_size', type=int, default=4)
